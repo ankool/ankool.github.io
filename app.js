@@ -28,7 +28,7 @@ const newestFirst = (a, b) => (b.date || b.year).localeCompare(a.date || a.year)
 function createEvidenceCard(item) {
   const link = document.createElement('a');
   link.className = 'evidence-card';
-  link.href = `/${item.image}`;
+  link.href = item.url || `/${item.image}`;
   link.target = '_blank';
   link.rel = 'noreferrer';
   link.setAttribute('aria-label', `Open evidence preview: ${item.title}`);
@@ -36,11 +36,16 @@ function createEvidenceCard(item) {
   const frame = document.createElement('div');
   frame.className = 'image-frame';
   const image = document.createElement('img');
-  image.src = `/${item.image}`;
-  image.alt = '';
-  image.loading = 'lazy';
-  image.decoding = 'async';
-  frame.append(image);
+  if (item.image) {
+    image.src = `/${item.image}`;
+    image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    frame.append(image);
+  } else {
+    frame.classList.add('external-evidence');
+    frame.textContent = 'Credly badge';
+  }
   const caption = document.createElement('figcaption');
   const year = document.createElement('span');
   year.textContent = item.year;
@@ -63,7 +68,7 @@ function renderArchive(target, items) {
     records.forEach((item) => {
       const entry = document.createElement('li');
       const link = document.createElement('a');
-      link.href = `/${item.image}`;
+      link.href = item.url || `/${item.image}`;
       link.target = '_blank';
       link.rel = 'noreferrer';
       link.textContent = item.title;

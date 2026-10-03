@@ -11,7 +11,7 @@
     "category": "certificate",
     "title": "Google Cloud Professional Cloud Architect",
     "year": "2026",
-    "date": "2026-00",
+    "date": "2026-02",
     "image": "assets/recognition/certificate-2026-28-gcp-certified-professional-cloud-architect.jpg",
     "source": "docs/base/Professional Certificates/2026-28_GCP-Certified-Professional-Cloud-Architect.pdf"
   },
@@ -41,11 +41,11 @@
   },
   {
     "category": "certificate",
-    "title": "IBM RAG and Agentic AI",
+    "title": "AI Agents with MongoDB",
     "year": "2025",
     "date": "2025-06",
-    "image": "assets/recognition/certificate-2025-06-ibm-rag-and-agentic-ai-build-next-gen-ai-assistants.jpg",
-    "source": "docs/base/Professional Certificates/AI Programs/2025.06-IBM RAG and Agentic AI- Build Next-Gen AI Assistants.pdf"
+    "url": "https://www.credly.com/badges/777897e2-0bd1-4fb3-ae11-c6bc225c7a8d",
+    "source": "Credly"
   },
   {
     "category": "award",
